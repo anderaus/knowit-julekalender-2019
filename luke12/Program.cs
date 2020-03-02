@@ -13,21 +13,16 @@ class Program
                 continue;
             }
 
-
             var iterationsCounter = 0;
             var currentNumber = i;
-            while (true)
+            while (currentNumber != 6174)
             {
                 iterationsCounter++;
                 currentNumber = SubtractSmallestSortedRepresentation(currentNumber);
 
-                if (currentNumber == 6174)
+                if (iterationsCounter == 7)
                 {
-                    if (iterationsCounter == 7)
-                    {
-                        used7IterationsCounter++;
-                    }
-                    break;
+                    used7IterationsCounter++;
                 }
             }
         }
