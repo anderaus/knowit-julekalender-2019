@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/luke03/bin/Debug/netcoreapp3.1/luke03.dll",
+            "program": "${workspaceFolder}/src/luke20/bin/Debug/netcoreapp3.1/luke20.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/luke03",
+            "cwd": "${workspaceFolder}/src/luke20",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
