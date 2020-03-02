@@ -39,15 +39,15 @@ class Program
 
             var positionBeforeMove = (X: robotPosition.X, Y: robotPosition.Y);
 
-            // Current setup for robot Arthur (SEWN), rearrange for Isaax (ESWN)
-            if (!currentRoom.Syd && !rooms[robotPosition.X, robotPosition.Y + 1].AlreadyVisited)
-            {
-                robotPosition.Y++;
-                visitedRoomsInOrder.Push(currentRoom);
-            }
-            else if (!currentRoom.Aust && !rooms[robotPosition.X + 1, robotPosition.Y].AlreadyVisited)
+            // Setup for robot Arthur is SEWN, Isaac is ESWN
+            if (!currentRoom.Aust && !rooms[robotPosition.X + 1, robotPosition.Y].AlreadyVisited)
             {
                 robotPosition.X++;
+                visitedRoomsInOrder.Push(currentRoom);
+            }
+            else if (!currentRoom.Syd && !rooms[robotPosition.X, robotPosition.Y + 1].AlreadyVisited)
+            {
+                robotPosition.Y++;
                 visitedRoomsInOrder.Push(currentRoom);
             }
             else if (!currentRoom.Vest && !rooms[robotPosition.X - 1, robotPosition.Y].AlreadyVisited)
@@ -76,7 +76,7 @@ class Program
         Console.WriteLine($"Number of visited rooms: {rooms.Cast<Room>().Count(v => v.AlreadyVisited)}");
 
         // Save image to file
-        image.Save("result_arthur.png");
+        image.Save("result_isaac.png");
         image.Dispose();
     }
 
